@@ -1,0 +1,42 @@
+@use "./global" as *;
+
+.Hero {
+  max-width: $max-width;
+  margin: auto;
+  padding: 6rem 0 6.25rem;
+  text-align: center;
+  h1 {
+    color: $tx_1;
+    font-size: 5.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+
+    :nth-child(1) {
+      opacity: 0;
+      animation: fadein 1s forwards 0s;
+    }
+    :nth-child(2) {
+      opacity: 0;
+      animation: fadein 1s forwards 1s;
+    }
+  }
+  p {
+    margin-top: 1.5rem;
+    color: #86868b;
+    font-size: 1.5rem;
+    line-height: 1.16;
+    opacity: 0;
+    animation: fadein 1s forwards 2s;
+  }
+}
+
+@keyframes fadein {
+  from {
+    transform: translateY(30%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}

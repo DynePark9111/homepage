@@ -1,0 +1,67 @@
+@use "./global" as *;
+
+.Info {
+  align-items: flex-end;
+  display: flex;
+  .Time {
+    color: lightgrey;
+    font-size: 6em;
+    height: 5rem;
+    line-height: 5rem;
+    text-shadow: 2px 2px 2px rgba(black, 0.1);
+  }
+  .Weather {
+    display: inline-flex;
+    height: 20px;
+    margin-bottom: 6px;
+    margin-left: 20px;
+    color: white;
+
+    & > * {
+      align-items: center;
+      display: inline-flex;
+    }
+
+    .icon {
+      color: yellow;
+      font-size: 0.9em;
+    }
+
+    .type {
+      height: 20px;
+    }
+
+    .value {
+      font-size: 1.5em;
+      height: 20px;
+      margin-left: 5px;
+    }
+
+    .unit {
+      align-items: flex-start;
+      font-size: 0.8em;
+      margin-left: 3px;
+    }
+  }
+}
+
+#appInfo {
+  bottom: 0px;
+  left: 0px;
+  margin: 40px;
+  margin-left: 0px;
+  opacity: 0;
+  position: absolute;
+  transform: translateX(-100%);
+  transition: margin 250ms, opacity 250ms, transform 250ms;
+  z-index: 2;
+}
+
+.logout {
+  #appInfo {
+    //logged out
+    margin-left: 40px;
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}

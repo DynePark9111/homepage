@@ -1,3 +1,11 @@
+import Background from "../components/Background";
+import Info from "../components/Info";
+
 export default function Home() {
-  return <div>Home</div>;
+  return (
+    <>
+      <Info id={"appInfo"} />
+      <Background />
+    </>
+  );
 }

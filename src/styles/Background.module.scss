@@ -1,0 +1,22 @@
+@use "./global" as *;
+
+$backgroundImage: url("https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2076&q=80");
+
+.Background {
+  height: 100%;
+  left: 0px;
+  overflow: hidden;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+  cursor: pointer;
+
+  .bgImage {
+    @include bgImage;
+    background-image: $backgroundImage;
+    height: 100%;
+    transition: filter 250ms, transform 250ms;
+    width: 100%;
+  }
+}

@@ -49,3 +49,9 @@
     }
   }
 }
+
+@media (max-width: $screenM) {
+  .Pin {
+    top: 30%;
+  }
+}

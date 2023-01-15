@@ -1,23 +1,20 @@
 // size
+$screenL: 80rem;
+$screenM: 40rem;
+$screenS: 30rem;
 
 $white: white;
 $grey: grey;
 $lightgrey: lightgrey;
 $black: black;
 $red: #ef5350;
-
-@mixin bgImage {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  // filter: brightness(0.5);
-}
+$yellow: yellow;
 
 @mixin clearBtn {
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(2px);
   background-color: rgba($white, 0.1);
   border: 1px solid rgba($white, 0.1);
-  border-radius: 100px;
+  border-radius: 6.25rem;
   box-shadow: 2px 2px 2px rgba($black, 0.1);
   cursor: pointer;
 

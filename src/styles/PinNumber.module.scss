@@ -30,7 +30,7 @@
   &:before {
     background-color: $lightgrey;
     border-radius: 10px;
-    bottom: 0px;
+    bottom: 0;
     height: 3px;
     left: 15%;
     opacity: 0;
@@ -40,18 +40,18 @@
 
   &:after {
     background-color: $lightgrey;
-    border-radius: 20px;
-    height: 20px;
+    border-radius: 1.25rem;
+    height: 1.25rem;
     opacity: 0;
     transform: scale(0.25);
-    width: 20px;
+    width: 1.25rem;
   }
 
   &.focused {
     &:before {
       animation: blink 2s ease-in-out infinite;
       opacity: 1;
-      transform: translateY(-10px);
+      transform: translateY(-0.625rem);
     }
   }
 

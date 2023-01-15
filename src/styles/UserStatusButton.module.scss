@@ -7,7 +7,7 @@
   padding: 0.625rem;
   width: 6.25rem;
   @include clearBtn;
-  &#signIn {
+  &#LoggedOut {
     &:not(:hover) {
       animation: bounce 3s infinite;
       animation-delay: 3s;

@@ -3,6 +3,19 @@
 .Info {
   align-items: flex-end;
   display: flex;
+  &.homeInfo {
+    inset: auto auto 0 0;
+    margin: 2.5rem;
+    opacity: 0;
+    position: absolute;
+    transform: translateX(-100%);
+    transition: opacity 250ms, transform 250ms;
+    z-index: 2;
+    &#LoggedOut {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
   .Time {
     color: $lightgrey;
     font-size: 6em;
@@ -29,29 +42,15 @@
     .value {
       font-size: 1.5em;
       height: 1.25rem;
-      margin-left: 5px;
+      margin-left: 0.3125rem;
       color: $lightgrey;
     }
     .unit {
       align-items: flex-start;
       font-size: 0.8em;
-      margin-left: 3px;
+      margin-left: 0.1875rem;
       color: $lightgrey;
     }
-  }
-}
-
-.appInfo {
-  inset: auto auto 0 0;
-  margin: 2.5rem;
-  opacity: 0;
-  position: absolute;
-  transform: translateX(-100%);
-  transition: opacity 250ms, transform 250ms;
-  z-index: 2;
-  &#LoggedOut {
-    opacity: 1;
-    transform: translateX(0%);
   }
 }
 

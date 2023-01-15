@@ -1,0 +1,15 @@
+@use "./global" as *;
+
+.Reminder {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  margin-top: 0.625rem;
+  color: $lightgrey;
+  span {
+    color: $lightgrey;
+  }
+  .time {
+    font-size: 0.75rem;
+  }
+}

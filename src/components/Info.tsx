@@ -5,21 +5,11 @@ import { FaSun } from "react-icons/fa";
 import { T, N, getStatusStyle } from "../utils/utils";
 import { AppContext } from "../contexts/AppContext";
 
-export default function Info({ id }: InfoProps) {
+export default function Info({ type = "" }: InfoProps) {
   const { userStatus } = useContext(AppContext);
-
-  function getId(id: string) {
-    switch (id) {
-      case "appInfo":
-        return styles.appInfo;
-      default:
-        return "";
-    }
-  }
-
   return (
     <div
-      className={`${styles.Info} ${getId(id)}`}
+      className={`${styles.Info} ${type === "home" ? styles.homeInfo : ""}`}
       id={getStatusStyle(userStatus, styles)}
     >
       <Time />
@@ -45,5 +35,5 @@ function Weather() {
 }
 
 type InfoProps = {
-  id: string;
+  type?: string;
 };

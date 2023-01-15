@@ -7,6 +7,7 @@ import { getStatusStyle } from "../utils/utils";
 import { useContext } from "react";
 import { AppContext } from "../contexts/AppContext";
 import Pin from "../components/Pin";
+import Loading from "../components/Loading";
 
 export default function Home() {
   const { userStatus } = useContext(AppContext);
@@ -15,6 +16,7 @@ export default function Home() {
     <div className={styles.Home} id={getStatusStyle(userStatus, styles)}>
       <Info id="appInfo" />
       <Background />
+      <Loading />
       <Pin />
       <div className={styles.wrapper}>
         <UserStatusButton status={UserStatus.LoggingIn} />

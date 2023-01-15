@@ -7,6 +7,7 @@ import Info from "./Info";
 import QuickNav from "./QuickNav";
 import Reminder from "./Reminder";
 import UserStatusButton from "./UserStatusButton";
+import Weather from "./Weather";
 
 export default function Main() {
   const { userStatus } = useContext(AppContext);
@@ -15,7 +16,7 @@ export default function Main() {
     <div className={styles.Main} id={getStatusStyle(userStatus, styles)}>
       <div className={styles.wrapper}>
         <div className={styles.content}>
-          <header>
+          <header className={styles.mainHeader}>
             <section>
               <Info />
               <Reminder />
@@ -25,6 +26,7 @@ export default function Main() {
             </section>
           </header>
           <QuickNav />
+          <Weather />
           {/* <contents /> */}
         </div>
       </div>

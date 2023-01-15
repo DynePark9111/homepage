@@ -5,7 +5,7 @@ export default function QuickNav() {
     <div className={styles.QuickNav}>
       {NavItems.map((item) => {
         return (
-          <div className={styles.navItem}>
+          <div className={styles.navItem} key={item}>
             <span className={styles.label}>{item}</span>
           </div>
         );
@@ -14,4 +14,4 @@ export default function QuickNav() {
   );
 }
 
-const NavItems = ["A", "B", "C", "D"];
+const NavItems = ["Weather", "B", "C", "D"];

@@ -11,3 +11,10 @@ export enum UserStatus {
 export type childrenProps = {
   children: ReactNode;
 };
+
+export enum WeatherType {
+  Cloudy = "Cloudy",
+  Rainy = "Rainy",
+  Stormy = "Stormy",
+  Sunny = "Sunny",
+}

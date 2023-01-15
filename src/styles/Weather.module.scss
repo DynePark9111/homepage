@@ -1,0 +1,77 @@
+@use "./global" as *;
+
+.Weather {
+  display: flex;
+  gap: 1em;
+  padding: 5px 0px;
+  width: 100%;
+  overflow-x: scroll;
+  @include hideYScroll;
+  .DayCard {
+    backdrop-filter: blur(3px);
+    background-color: rgba(white, 0.1);
+    border: 1px solid rgba(white, 0.2);
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(black, 0.25);
+    height: 8vw;
+    max-height: 160px;
+    min-height: 140px;
+    min-width: 180px;
+    position: relative;
+    transition: transform 250ms;
+    width: calc(100% / 7);
+    &:last-of-type {
+      margin-right: 5px;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      height: calc(100% - 0.625rem);
+      justify-content: space-evenly;
+      padding: 0.625rem;
+      text-align: center;
+      .temp {
+        align-items: flex-start;
+        display: flex;
+        font-size: 0.9em;
+        justify-content: center;
+        .value {
+          color: $white;
+          align-items: flex-start;
+          display: flex;
+          font-size: 0.9em;
+          justify-content: center;
+        }
+        .unit {
+          color: $white;
+          font-size: 0.8em;
+          margin-left: 3px;
+        }
+      }
+      .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5em;
+        text-shadow: 2px 2px 2px rgba(black, 0.1);
+        .sun,
+        .bolt {
+          color: $yellow;
+        }
+        .cloud {
+          color: $lightgrey;
+        }
+
+        .rain,
+        .storm {
+          color: $blue;
+        }
+      }
+      .name {
+        color: $white;
+        font-size: 0.9em;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

@@ -4,19 +4,25 @@ $backgroundImage: url("https://images.unsplash.com/photo-1483728642387-6c3bdd6c9
 
 .Background {
   height: 100%;
-  left: 0px;
+  inset: 0;
   overflow: hidden;
   position: fixed;
-  top: 0px;
   width: 100%;
   z-index: 1;
   cursor: pointer;
-
+  &#LoggingIn,
+  &#VerifyingLogIn,
+  &#LogInError {
+    .bgImage {
+      filter: blur(8px) brightness(0.5);
+      transform: scale(1.2);
+    }
+  }
   .bgImage {
     @include bgImage;
     background-image: $backgroundImage;
     height: 100%;
-    transition: filter 250ms, transform 250ms;
     width: 100%;
+    transition: filter 250ms transform 250ms;
   }
 }

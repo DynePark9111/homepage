@@ -8,16 +8,12 @@ import { AppContext } from "../contexts/AppContext";
 export default function UserStatusButton({ status }: UserStatusButtonProps) {
   const { userStatus, setUserStatus } = useContext(AppContext);
 
-  const handleOnClick = (): void => {
-    setUserStatus(status);
-  };
-
   return (
     <button
       className={styles.UserStatusButton}
       id={styles.signIn}
       disabled={status === userStatus}
-      onClick={handleOnClick}
+      onClick={() => setUserStatus(status)}
     >
       <FiLogIn className={styles.icon} />
     </button>

@@ -1,5 +1,10 @@
 @use "./global" as *;
 
+$max-width: 980px;
+$screen_1: 1068px;
+$screen_2: 734px;
+$tx_1: #1d1d1f;
+
 .Hero {
   max-width: $max-width;
   margin: auto;

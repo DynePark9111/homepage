@@ -1,11 +1,14 @@
+@use "./global" as *;
+
 body {
   margin: 0rem;
   overflow-x: hidden;
   padding: 0rem;
   font-family: "Open Sans", "Rubik", sans-serif;
+  @include hideYScroll;
 
   a {
-    color: white;
+    color: $white;
     text-decoration: none;
     outline: none;
   }
@@ -13,23 +16,8 @@ body {
   a:hover,
   a:active {
     text-decoration: none;
-    color: white;
+    color: $white;
     background-color: #f59000;
-  }
-  //
-
-  &::-webkit-scrollbar-track {
-    background-color: gray(30);
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: rgba(white, 0.2);
-    border-radius: 100px;
-  }
-
-  &::-webkit-scrollbar {
-    height: 0.25rem;
-    width: 0.25rem;
   }
 
   input,
@@ -38,10 +26,9 @@ body {
   h3,
   a,
   span {
-    color: gray(90);
-    font-family: "Rubik", sans-serif;
-    font-weight: 400;
+    color: $grey;
     margin: 0rem;
     padding: 0rem;
+    font-weight: 400;
   }
 }

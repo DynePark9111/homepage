@@ -11,9 +11,11 @@
     transition: opacity 250ms, transform 250ms;
     z-index: 2;
   }
-  .wrapper {
-    opacity: 1;
-    pointer-events: all;
-    transform: translate(-50%, -40px);
+  &#LoggedOut {
+    .wrapper {
+      opacity: 1;
+      pointer-events: all;
+      transform: translate(-50%, -40px);
+    }
   }
 }

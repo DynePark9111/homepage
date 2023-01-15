@@ -4,18 +4,18 @@
   align-items: flex-end;
   display: flex;
   .Time {
-    color: lightgrey;
+    color: $lightgrey;
     font-size: 6em;
     height: 5rem;
     line-height: 5rem;
-    text-shadow: 2px 2px 2px rgba(black, 0.1);
+    text-shadow: 2px 2px 2px rgba($black, 0.1);
   }
   .Weather {
     display: inline-flex;
     height: 20px;
     margin-bottom: 6px;
     margin-left: 20px;
-    color: white;
+    color: $white;
 
     & > * {
       align-items: center;
@@ -45,7 +45,7 @@
   }
 }
 
-#appInfo {
+.appInfo {
   bottom: 0px;
   left: 0px;
   margin: 40px;
@@ -55,11 +55,7 @@
   transform: translateX(-100%);
   transition: margin 250ms, opacity 250ms, transform 250ms;
   z-index: 2;
-}
-
-.logout {
-  #appInfo {
-    //logged out
+  &#LoggedOut {
     margin-left: 40px;
     opacity: 1;
     transform: translateX(0%);

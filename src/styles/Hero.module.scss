@@ -3,7 +3,6 @@
 $max-width: 980px;
 $screen_1: 1068px;
 $screen_2: 734px;
-$tx_1: #1d1d1f;
 
 .Hero {
   max-width: $max-width;
@@ -12,7 +11,7 @@ $tx_1: #1d1d1f;
   text-align: center;
   font-size: 1rem;
   h1 {
-    color: $tx_1;
+    color: $white;
     font-size: 5.5em;
     font-weight: bold;
     margin-bottom: 1rem;
@@ -28,7 +27,7 @@ $tx_1: #1d1d1f;
   }
   p {
     margin-top: 1.5rem;
-    color: #86868b;
+    color: $lightgrey;
     font-size: 1.5em;
     line-height: 1.16;
     opacity: 0;

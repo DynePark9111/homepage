@@ -1,8 +1,9 @@
 import Hero from "../components/Hero";
+import styles from "../styles/pages/_Maintenance.module.scss";
 
 export default function Maintenance() {
   return (
-    <div>
+    <div className={styles.Maintenance}>
       <Hero
         title="Website"
         title2="Under Construction"

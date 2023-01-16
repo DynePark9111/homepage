@@ -1,5 +1,9 @@
 @use "./global" as *;
 
+$max-width: 980px;
+$screen_1: 1068px;
+$screen_2: 734px;
+
 .Hero {
   max-width: $max-width;
   margin: auto;
@@ -7,7 +11,7 @@
   text-align: center;
   font-size: 1rem;
   h1 {
-    color: $tx_1;
+    color: $white;
     font-size: 5.5em;
     font-weight: bold;
     margin-bottom: 1rem;
@@ -23,7 +27,7 @@
   }
   p {
     margin-top: 1.5rem;
-    color: #86868b;
+    color: $lightgrey;
     font-size: 1.5em;
     line-height: 1.16;
     opacity: 0;

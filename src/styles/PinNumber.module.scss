@@ -1,0 +1,86 @@
+@use "./global" as *;
+
+.PinNumber {
+  background-color: $white;
+  align-items: center;
+  background-color: rgba($white, 0.05);
+  border: 1px solid rgba($white, 0.2);
+  border-radius: 0.75rem;
+  box-shadow: 2px 2px 2px rgba($black, 0.06);
+  display: inline-flex;
+  font-size: 3em;
+  height: 5rem;
+  justify-content: center;
+  position: relative;
+  transition: background-color 300ms, border-color 300ms;
+  width: 3.75rem;
+  &#LogInError {
+    background-color: rgba($red, 0.05);
+    border-color: rgba($red, 0.5);
+  }
+  &:after,
+  &:before {
+    box-shadow: 2px 2px 2px rgba($black, 0.06);
+    content: "";
+    position: absolute;
+    transition: opacity 300ms, transform 300ms;
+    z-index: 2;
+  }
+
+  &:before {
+    background-color: $lightgrey;
+    border-radius: 0.625rem;
+    bottom: 0;
+    height: 0.1875rem;
+    left: 15%;
+    opacity: 0;
+    transform: translateY(0);
+    width: 70%;
+  }
+
+  &:after {
+    background-color: $lightgrey;
+    border-radius: 1.25rem;
+    height: 1.25rem;
+    opacity: 0;
+    transform: scale(0.25);
+    width: 1.25rem;
+  }
+
+  &.focused {
+    &:before {
+      animation: blink 2s ease-in-out infinite;
+      opacity: 1;
+      transform: translateY(-0.625rem);
+    }
+  }
+
+  &.hidden {
+    &:after {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .digit {
+      opacity: 0;
+      transform: scale(0.25);
+    }
+  }
+
+  .digit {
+    color: $lightgrey;
+    transition: opacity 300ms, transform 300ms;
+  }
+}
+
+@keyframes blink {
+  from,
+  25%,
+  to {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}

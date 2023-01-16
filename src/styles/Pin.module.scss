@@ -1,0 +1,57 @@
+@use "./global" as *;
+
+.Pin {
+  left: 50%;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -30%) scale(0.8);
+  transition: opacity 300ms, transform 300ms;
+  z-index: 2;
+  &#LoggingIn,
+  &#LogInError {
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  input {
+    background-color: transparent;
+    border: none;
+    height: 0;
+    outline: none;
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+  }
+
+  .pinNumbers {
+    display: flex;
+    gap: 0.625rem;
+  }
+
+  .label {
+    color: $lightgrey;
+    font-size: 0.9em;
+    margin: 0.5rem 0.25rem;
+    text-shadow: 2px 2px 2px rgba($black, 0.1);
+    .cancel {
+      cursor: pointer;
+      margin-left: 0.5rem;
+      color: $red;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .error {
+      margin-left: 0.5rem;
+      color: $red;
+    }
+  }
+}
+
+@media (max-width: $screenM) {
+  .Pin {
+    top: 30%;
+  }
+}

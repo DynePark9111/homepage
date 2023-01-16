@@ -1,0 +1,23 @@
+@use "./global" as *;
+
+.QuickNav {
+  display: flex;
+  gap: 0.625rem;
+  margin-top: 1.25rem;
+  overflow: auto;
+  padding-bottom: 0.3125rem;
+  width: 100%;
+  z-index: 3;
+  @include hideYScroll;
+  .navItem {
+    @include clearBtn;
+    padding: 0.625rem 1.25rem;
+    &:last-of-type {
+      margin-right: 0.625rem;
+    }
+    .label {
+      color: $lightgrey;
+      text-shadow: 0 0 2px rgba(black, 0.1);
+    }
+  }
+}

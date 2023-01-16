@@ -5,9 +5,11 @@ export default function QuickNav() {
     <div className={styles.QuickNav}>
       {NavItems.map((item) => {
         return (
-          <div className={styles.navItem} key={item}>
-            <span className={styles.label}>{item}</span>
-          </div>
+          <a href={`#${item}`}>
+            <div className={styles.navItem} key={item}>
+              <span className={styles.label}>{item}</span>
+            </div>
+          </a>
         );
       })}
     </div>

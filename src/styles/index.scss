@@ -1,5 +1,8 @@
 @use "./global" as *;
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0rem;
   overflow-x: hidden;
@@ -17,7 +20,6 @@ body {
   a:active {
     text-decoration: none;
     color: $white;
-    background-color: #f59000;
   }
 
   input,

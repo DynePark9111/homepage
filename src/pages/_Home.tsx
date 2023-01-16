@@ -8,7 +8,7 @@ import { useContext } from "react";
 import { AppContext } from "../contexts/AppContext";
 import Pin from "../components/Pin";
 import Loading from "../components/Loading";
-import Main from "../components/Main";
+import My from "../components/My";
 
 export default function Home() {
   const { userStatus } = useContext(AppContext);
@@ -22,7 +22,7 @@ export default function Home() {
       <div className={styles.wrapper}>
         <UserStatusButton icon={"login"} status={UserStatus.LoggingIn} />
       </div>
-      <Main />
+      <My /> {/* when logged in */}
     </div>
   );
 }

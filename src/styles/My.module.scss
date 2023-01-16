@@ -1,6 +1,6 @@
 @use "./global" as *;
 
-.Main {
+.My {
   height: 100vh;
   overflow: hidden;
   opacity: 0;
@@ -16,26 +16,22 @@
     pointer-events: all;
     transform: translateY(0%);
   }
+  .ribbonWrapper {
+    height: 70vh;
+  }
   .wrapper {
     background: linear-gradient(to bottom, transparent, gray(30));
-    margin-top: 30vh;
     min-height: 80vh;
     padding: 5rem;
     padding-top: 0;
-    .content {
-      margin: auto;
-      max-width: $screenMax;
-      position: relative;
-      .mainHeader {
-        display: flex;
-        justify-content: space-between;
-      }
-    }
+    margin: auto;
+    max-width: $screenMax;
+    position: relative;
   }
 }
 
 @media (max-width: $screenL) {
-  .Main {
+  .My {
     .wrapper {
       padding: 2rem;
     }
@@ -43,7 +39,7 @@
 }
 
 @media (max-width: $screenS) {
-  .Main {
+  .My {
     .wrapper {
       padding: 1rem;
     }

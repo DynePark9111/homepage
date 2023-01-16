@@ -2,9 +2,9 @@ import styles from "../styles/Weather.module.scss";
 import Section from "./Section";
 import { FaBolt, FaCloud, FaCloudRain, FaSun } from "react-icons/fa";
 import { N } from "../utils/utils";
-import { ReactNode } from "react";
+import { forwardRef, ReactNode } from "react";
 
-export default function Weather() {
+export default forwardRef(function Weather() {
   return (
     <Section title="Weather" icon={<FaSun />}>
       <div className={styles.Weather}>
@@ -19,10 +19,9 @@ export default function Weather() {
           );
         })}
       </div>
-      ;
     </Section>
   );
-}
+});
 
 function DayCard({ temp, icon, name }: DayCardProps) {
   return (

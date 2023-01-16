@@ -46,7 +46,7 @@ type logIn = {
   verify: (pin: string) => Promise<boolean>;
 };
 
-const PIN_NUBMER = "9111";
+const PIN_NUBMER = "1234";
 export const logIn: logIn = {
   verify: async (pin) => {
     return new Promise((res, rej) => {

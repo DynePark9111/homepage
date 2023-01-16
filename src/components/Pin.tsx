@@ -71,7 +71,7 @@ export default function Pin() {
         <PinNumber focused={pin.length === 3} value={pin[3]} />
       </div>
       <h3 className={styles.label}>
-        Enter PIN (9111)
+        Enter password(1234)
         {userStatus === UserStatus.LogInError && <ErrorText />}
         <CancelText />
       </h3>

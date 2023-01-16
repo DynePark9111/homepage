@@ -4,6 +4,7 @@ import styles from "../styles/Main.module.scss";
 import { UserStatus } from "../utils/types";
 import { getStatusStyle } from "../utils/utils";
 import Info from "./Info";
+import Photos from "./Photos";
 import Projects from "./Projects";
 import QuickNav from "./QuickNav";
 import Reminder from "./Reminder";
@@ -31,6 +32,7 @@ export default function Main() {
           <Weather />
           <Projects />
           <Youtube />
+          <Photos />
         </div>
       </div>
     </div>

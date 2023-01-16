@@ -7,7 +7,7 @@
   position: absolute;
   top: 50%;
   transform: translate(-50%, -30%) scale(0.8);
-  transition: opacity 250ms, transform 250ms;
+  transition: opacity 300ms, transform 300ms;
   z-index: 2;
   &#LoggingIn,
   &#LogInError {
@@ -38,7 +38,7 @@
     .cancel {
       cursor: pointer;
       margin-left: 0.5rem;
-      color: $grey;
+      color: $red;
       &:hover {
         text-decoration: underline;
       }

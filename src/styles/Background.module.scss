@@ -15,7 +15,7 @@ $backgroundImage: url(../assets/wave.jpeg);
   &#VerifyingLogIn,
   &#LogInError {
     .bgImage {
-      filter: blur(0.5rem) brightness(0.5);
+      filter: blur(0.5rem) brightness(0.4);
       transform: scale(1.2);
     }
   }
@@ -23,10 +23,10 @@ $backgroundImage: url(../assets/wave.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    filter: brightness(0.5);
+    filter: brightness(0.4);
     background-image: $backgroundImage;
     height: 100%;
     width: 100%;
-    transition: filter 250ms transform 250ms;
+    transition: filter 300ms transform 300ms;
   }
 }

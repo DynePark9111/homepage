@@ -14,4 +14,4 @@ export default function QuickNav() {
   );
 }
 
-const NavItems = ["Weather", "Projects", "Youtube", "D"];
+const NavItems = ["Weather", "Projects", "Youtube", "Photos"];

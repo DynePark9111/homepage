@@ -1,0 +1,57 @@
+@use "./global" as *;
+
+.Photos {
+  display: flex;
+  gap: 1em;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .Photo {
+    background-color: gray(30);
+    border-radius: 0.625rem;
+    box-shadow: 2px 2px 4px rgba(black, 0.25);
+    cursor: pointer;
+    height: 40vw;
+    max-height: 37.5rem;
+    min-height: 28.75rem;
+    min-width: 16.25rem;
+    overflow: hidden;
+    position: relative;
+    transition: transform 300ms;
+    width: calc(100% / 4);
+    &:hover {
+      .img {
+        transform: scale(1.05);
+      }
+    }
+    .img {
+      position: absolute;
+      inset: 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      filter: brightness(0.5);
+      transition: transform 300ms;
+      background-position: 30% 50%;
+      border: 1px soild green;
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.375rem;
+      padding: 1.875rem;
+      .title {
+        z-index: 1;
+        color: $lightgrey;
+        font-size: 2em;
+      }
+      .desc {
+        z-index: 1;
+        color: lightgrey;
+        font-size: 0.9em;
+      }
+    }
+  }
+}

@@ -1,7 +1,6 @@
 import styles from "../styles/Weather.module.scss";
 import Section from "./Section";
 import { FaBolt, FaCloud, FaCloudRain, FaSun } from "react-icons/fa";
-import { WeatherType } from "../utils/types";
 import { N } from "../utils/utils";
 import { ReactNode } from "react";
 

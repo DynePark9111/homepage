@@ -23,12 +23,11 @@
       height: 100%;
       width: 100%;
       .item {
-        bottom: 0px;
+        position: absolute;
+        inset: auto 0 0 auto;
         display: flex;
         flex-direction: column;
         margin: 1.25rem;
-        position: absolute;
-        right: 0px;
         text-align: right;
         transition: margin 250ms;
         .title {

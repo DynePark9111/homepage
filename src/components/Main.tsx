@@ -9,6 +9,7 @@ import QuickNav from "./QuickNav";
 import Reminder from "./Reminder";
 import UserStatusButton from "./UserStatusButton";
 import Weather from "./Weather";
+import Youtube from "./Youtube";
 
 export default function Main() {
   const { userStatus } = useContext(AppContext);
@@ -29,6 +30,7 @@ export default function Main() {
           <QuickNav />
           <Weather />
           <Projects />
+          <Youtube />
         </div>
       </div>
     </div>

@@ -1,0 +1,36 @@
+// size
+$screenMax: 100rem;
+$screenL: 80rem;
+$screenM: 40rem;
+$screenS: 30rem;
+
+$white: white;
+$grey: grey;
+$lightgrey: lightgrey;
+$black: black;
+$red: #ef5350;
+$yellow: #f9d71c;
+$blue: #42a5f5;
+
+@mixin clearBtn {
+  backdrop-filter: blur(2px);
+  background-color: rgba($white, 0.1);
+  border: 1px solid rgba($white, 0.1);
+  border-radius: 6.25rem;
+  box-shadow: 2px 2px 2px rgba($black, 0.1);
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba($white, 0.2);
+    border: 1px solid rgba($white, 0.3);
+  }
+}
+
+@mixin hideYScroll {
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

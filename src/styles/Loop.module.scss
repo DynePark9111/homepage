@@ -1,0 +1,32 @@
+/* loop styles */
+
+.Loop {
+  width: 100%;
+  overflow: hidden;
+  .loopWrapper {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    &[data-animate="true"] {
+      .instance {
+        animation: slide linear infinite;
+      }
+    }
+    .instance {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: max-content;
+      animation: none;
+    }
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translate(0%);
+  }
+  to {
+    transform: translate(-100%);
+  }
+}

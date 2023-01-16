@@ -1,0 +1,51 @@
+{
+  "React Component boilerplate": {
+    "prefix": "rfc",
+    "body": [
+      "import styles from '../styles/$TM_FILENAME_BASE.module.scss'",
+      "",
+      "export default function $TM_FILENAME_BASE() {",
+      "  return (",
+      "<div className={styles.$TM_FILENAME_BASE}>${1:$TM_FILENAME_BASE}</div>",
+      ")",
+      "}"
+    ],
+    "description": "boilerplate for React Component"
+  },
+  "React Component boilerplate arrow": {
+    "prefix": "rfca",
+    "body": [
+      "import styles from '../styles/$TM_FILENAME_BASE.module.scss'",
+      "",
+      "const $TM_FILENAME_BASE = ()=>{",
+      "  return (",
+      "<div className={styles.$TM_FILENAME_BASE}>${1:$TM_FILENAME_BASE}</div>",
+      ")",
+      "}",
+      "",
+      "export default $TM_FILENAME_BASE"
+    ],
+    "description": "boilerplate for React Component arrow function"
+  },
+  "Scss boilerplate": {
+    "prefix": "scs",
+    "body": [
+      "@use './global' as *;",
+      "",
+      ".$TM_FILENAME_BASE ${1}{",
+      "  background-color: #fff;",
+      "}"
+    ],
+    "description": "boilerplate for Scss"
+  },
+  "Flex Center": {
+    "prefix": "dfc",
+    "body": [
+      "display: flex;",
+      "justify-content: center;",
+      "align-items: center;",
+      "${1}"
+    ],
+    "description": "centers it"
+  }
+}

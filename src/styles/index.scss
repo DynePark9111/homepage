@@ -1,0 +1,36 @@
+@use "./global" as *;
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0rem;
+  overflow-x: hidden;
+  padding: 0rem;
+  font-family: "Open Sans", "Rubik", sans-serif;
+  @include hideYScroll;
+
+  a {
+    color: $white;
+    text-decoration: none;
+    outline: none;
+  }
+
+  a:hover,
+  a:active {
+    text-decoration: none;
+    color: $white;
+  }
+
+  input,
+  header,
+  h1,
+  h3,
+  a,
+  span {
+    color: $grey;
+    margin: 0rem;
+    padding: 0rem;
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,25 @@
+@use "./global" as *;
+
+.Section {
+  margin-top: 3.75rem;
+  .title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.375rem;
+    margin-bottom: 1rem;
+    .icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      svg {
+        color: $lightgrey;
+        font-size: 1em;
+      }
+    }
+    .text {
+      color: $lightgrey;
+      font-size: 1.25em;
+    }
+  }
+}

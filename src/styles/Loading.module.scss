@@ -1,0 +1,33 @@
+@use "./global" as *;
+
+.Loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  opacity: 0;
+  transform: translate(-50%, 0%);
+  transition: opacity 300ms, transform 300ms;
+  z-index: 2;
+  pointer-events: none;
+  svg {
+    animation: 2s spin ease-in-out infinite;
+    color: $white;
+    font-size: 2em;
+  }
+  &#VerifyingLogIn {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(720deg);
+  }
+  to {
+    transform: rotate(1440deg);
+  }
+}

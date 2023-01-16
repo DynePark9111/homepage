@@ -10,7 +10,7 @@ import { useState } from "react";
 import Modal from "./Modal";
 
 export default function Photos() {
-  const [photo, setPhoto] = useState(0);
+  const [photo, setPhoto] = useState(-1);
 
   return (
     <>

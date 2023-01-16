@@ -1,5 +1,5 @@
 import Hero from "../components/Hero";
-import styles from "../styles/Maintenance.module.scss";
+import styles from "../styles/pages/_Maintenance.module.scss";
 
 export default function Maintenance() {
   return (

@@ -1,5 +1,5 @@
 import { useContext, useRef } from "react";
-import { AppContext } from "../contexts/AppContext";
+import { UserContext } from "../contexts/UserContext";
 import styles from "../styles/My.module.scss";
 import { UserStatus } from "../utils/types";
 import { getStatusStyle, openGithub } from "../utils/utils";
@@ -12,7 +12,7 @@ import Weather from "./Weather";
 import Youtube from "./Youtube";
 
 export default function My() {
-  const { userStatus } = useContext(AppContext);
+  const { userStatus } = useContext(UserContext);
   const refs = useRef<HTMLDivElement[]>([]);
 
   return (

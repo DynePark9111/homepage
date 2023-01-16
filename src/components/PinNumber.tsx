@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { AppContext } from "../contexts/AppContext";
+import { UserContext } from "../contexts/UserContext";
 import styles from "../styles/PinNumber.module.scss";
 import { getStatusStyle } from "../utils/utils";
 
@@ -9,7 +9,7 @@ type PinNumberProps = {
 };
 
 export default function PinNumber({ value, focused }: PinNumberProps) {
-  const { userStatus } = useContext(AppContext);
+  const { userStatus } = useContext(UserContext);
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => {

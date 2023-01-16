@@ -3,10 +3,10 @@ import useCurrentDate from "../hooks/useCurrentDate";
 import { useContext, useState } from "react";
 import { FaSun } from "react-icons/fa";
 import { T, N, getStatusStyle } from "../utils/utils";
-import { AppContext } from "../contexts/AppContext";
+import { UserContext } from "../contexts/UserContext";
 
 export default function Info({ type = "" }: InfoProps) {
-  const { userStatus } = useContext(AppContext);
+  const { userStatus } = useContext(UserContext);
   return (
     <div
       className={`${styles.Info} ${type === "home" ? styles.homeInfo : ""}`}

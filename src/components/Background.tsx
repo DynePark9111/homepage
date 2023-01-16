@@ -1,11 +1,11 @@
 import { useContext } from "react";
-import { AppContext } from "../contexts/AppContext";
+import { UserContext } from "../contexts/UserContext";
 import styles from "../styles/Background.module.scss";
 import { UserStatus } from "../utils/types";
 import { getStatusStyle } from "../utils/utils";
 
 export default function Background() {
-  const { userStatus, setUserStatus } = useContext(AppContext);
+  const { userStatus, setUserStatus } = useContext(UserContext);
   function onClick() {
     userStatus === UserStatus.LoggedOut && setUserStatus(UserStatus.LoggingIn);
   }

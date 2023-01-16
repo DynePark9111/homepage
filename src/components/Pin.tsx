@@ -1,12 +1,12 @@
 import styles from "../styles/Pin.module.scss";
 import { useContext, useEffect, useRef, useState } from "react";
-import { AppContext } from "../contexts/AppContext";
+import { UserContext } from "../contexts/UserContext";
 import { UserStatus } from "../utils/types";
 import { getStatusStyle, logIn } from "../utils/utils";
 import PinNumber from "./PinNumber";
 
 export default function Pin() {
-  const { userStatus, setUserStatus } = useContext(AppContext);
+  const { userStatus, setUserStatus } = useContext(UserContext);
   const [pin, setPin] = useState("");
   const ref = useRef<HTMLInputElement>(null);
 
@@ -80,7 +80,7 @@ export default function Pin() {
 }
 
 function CancelText() {
-  const { setUserStatus } = useContext(AppContext);
+  const { setUserStatus } = useContext(UserContext);
 
   return (
     <span

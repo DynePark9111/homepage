@@ -1,18 +1,18 @@
 import Info from "../components/Info";
 import UserStatusButton from "../components/UserStatusButton";
 import { UserStatus } from "../utils/types";
-import styles from "../styles/Home.module.scss";
+import styles from "../styles/pages/_Home.module.scss";
 import { getStatusStyle } from "../utils/utils";
 import { useContext } from "react";
-import { AppContext } from "../contexts/AppContext";
 import Pin from "../components/Pin";
 import My from "../components/My";
+import { UserContext } from "../contexts/UserContext";
 
 export default function Home() {
-  const { userStatus } = useContext(AppContext);
+  const { userStatus } = useContext(UserContext);
 
   return (
-    <div className={styles.Home} id={getStatusStyle(userStatus, styles)}>
+    <div className={styles._Home} id={getStatusStyle(userStatus, styles)}>
       <Info type="home" />
       <Pin />
       <div className={styles.wrapper}>

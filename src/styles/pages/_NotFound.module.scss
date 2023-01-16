@@ -1,0 +1,7 @@
+@use "../global" as *;
+
+._NotFound {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+}

@@ -1,6 +1,6 @@
-@use "./global" as *;
+@use "../global" as *;
 
-.Home {
+._Home {
   .wrapper {
     bottom: 0;
     left: 50%;
@@ -21,16 +21,16 @@
 }
 
 @media (max-width: $screenL) {
-  .Home {
+  ._Home {
     .wrapper {
       bottom: 2.5rem;
       left: auto;
       right: 0;
-      transform: translate(2.5rem, 0px);
+      transform: translate(2.5rem, 0);
     }
     &#LoggedOut {
       .wrapper {
-        transform: translate(-2.5rem, 0px);
+        transform: translate(-2.5rem, 0);
       }
     }
   }

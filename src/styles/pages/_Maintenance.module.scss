@@ -1,6 +1,6 @@
-@use "./global" as *;
+@use "../global" as *;
 
-.Maintenance {
+._Maintenance {
   position: fixed;
   inset: 0;
   z-index: 1;

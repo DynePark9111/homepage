@@ -3,14 +3,14 @@ import styles from "../styles/UserStatusButton.module.scss";
 import { useContext } from "react";
 import { UserStatus } from "../utils/types";
 import { FiLogIn, FiLogOut } from "react-icons/fi";
-import { AppContext } from "../contexts/AppContext";
+import { UserContext } from "../contexts/UserContext";
 import { getStatusStyle } from "../utils/utils";
 
 export default function UserStatusButton({
   icon,
   status,
 }: UserStatusButtonProps) {
-  const { userStatus, setUserStatus } = useContext(AppContext);
+  const { userStatus, setUserStatus } = useContext(UserContext);
 
   return (
     <button

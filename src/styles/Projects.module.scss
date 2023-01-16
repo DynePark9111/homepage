@@ -1,0 +1,70 @@
+@use "./global" as *;
+
+.Projects {
+  display: flex;
+  gap: 1em;
+  .Project {
+    background-size: cover;
+    background-position: top left;
+    border-radius: 0.625rem;
+    box-shadow: 2px 2px 4px rgba(black, 0.25);
+    cursor: pointer;
+    height: 14vw;
+    max-height: 15rem;
+    position: relative;
+    transition: transform 250ms;
+    width: 25%;
+    &:hover {
+      transform: translateY(-5px);
+    }
+    .content {
+      background: linear-gradient(to top, rgba(black, 0.8), transparent);
+      border-radius: 0.625rem;
+      height: 100%;
+      width: 100%;
+      .item {
+        bottom: 0px;
+        display: flex;
+        flex-direction: column;
+        margin: 1.25rem;
+        position: absolute;
+        right: 0px;
+        text-align: right;
+        transition: margin 250ms;
+        .title {
+          color: $white;
+          font-size: 1.5em;
+        }
+        .desc {
+          color: $blue;
+          font-size: 0.9em;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $screenL) {
+  .Projects {
+    flex-wrap: wrap;
+
+    .Project {
+      height: 30vw;
+      max-height: 18.75rem;
+      position: relative;
+      width: calc(50% - 0.5em);
+    }
+  }
+}
+
+@media (max-width: $screenM) {
+  .Projects {
+    flex-direction: column;
+
+    .Project {
+      height: 50vw;
+      position: relative;
+      width: 100%;
+    }
+  }
+}

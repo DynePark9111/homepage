@@ -4,6 +4,7 @@ import styles from "../styles/Main.module.scss";
 import { UserStatus } from "../utils/types";
 import { getStatusStyle } from "../utils/utils";
 import Info from "./Info";
+import Projects from "./Projects";
 import QuickNav from "./QuickNav";
 import Reminder from "./Reminder";
 import UserStatusButton from "./UserStatusButton";
@@ -27,7 +28,7 @@ export default function Main() {
           </header>
           <QuickNav />
           <Weather />
-          {/* <contents /> */}
+          <Projects />
         </div>
       </div>
     </div>

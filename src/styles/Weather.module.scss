@@ -11,12 +11,12 @@
     backdrop-filter: blur(3px);
     background-color: rgba(white, 0.1);
     border: 1px solid rgba(white, 0.2);
-    border-radius: 10px;
+    border-radius: 0.625rem;
     box-shadow: 2px 2px 4px rgba(black, 0.25);
     height: 8vw;
-    max-height: 160px;
-    min-height: 140px;
-    min-width: 180px;
+    max-height: 10rem;
+    min-height: 8.75rem;
+    min-width: 11.25rem;
     position: relative;
     transition: transform 250ms;
     width: calc(100% / 7);

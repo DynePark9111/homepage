@@ -60,3 +60,7 @@ export const logIn: logIn = {
     });
   },
 };
+
+export function openGithub(link: string) {
+  window.open(`https://github.com/DynePark9111/${link}`, "_blank");
+}
